@@ -30,7 +30,7 @@ public class OrderMasterServiceImplTest2 {
 
     @Test
     public void findOne() throws Exception {
-        OrderDto orderDto = orderMasterService.findOne("15219770800731976275");
+        OrderDto orderDto = orderMasterService.findOne("15219738565175087513");
         logger.error("orderMasterService"+orderDto.toString());
     }
 
@@ -47,14 +47,29 @@ public class OrderMasterServiceImplTest2 {
 
     @Test
     public void cancel() throws Exception {
+        OrderDto orderDto = orderMasterService.findOne("15219738565175087513");
+       // OrderDto orderDto =new OrderDto();
+                logger.error("orderMasterService=findOne="+orderDto.toString());
+        OrderDto orderDto1 = orderMasterService.cancel(orderDto);
+        logger.error("orderMasterService="+orderDto1.toString());
+
     }
 
     @Test
     public void finiSh() throws Exception {
+        OrderDto orderDto = orderMasterService.findOne("101");
+        logger.error("orderMasterService=findOne="+orderDto.toString());
+        OrderDto orderDto1 = orderMasterService.finiSh(orderDto);
+        logger.error("orderMasterService="+orderDto1.toString());
+
     }
 
     @Test
     public void pay() throws Exception {
+        OrderDto orderDto = orderMasterService.findOne("102");
+        logger.error("orderMasterService=findOne="+orderDto.toString());
+        OrderDto orderDto1 = orderMasterService.pay(orderDto);
+        logger.error("orderMasterService="+orderDto1.toString());
     }
 
     @Test

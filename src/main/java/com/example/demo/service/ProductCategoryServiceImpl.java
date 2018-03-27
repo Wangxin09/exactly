@@ -30,7 +30,10 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     public List<ProductCategory> findAll() {
         return repository.findAll();
     }
-    //买家查找---类目编号
+
+    /**
+     * 买家查找---类目编号
+     */
     @Override
     public List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList) {
         return repository.findByCategoryTypeIn(categoryTypeList);
